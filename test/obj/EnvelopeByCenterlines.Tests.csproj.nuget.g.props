@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>
+    <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
+    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">$(MSBuildThisFileDirectory)project.assets.json</ProjectAssetsFile>
+    <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">/Users/andrewheumann/.nuget/packages/</NuGetPackageRoot>
+    <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">/Users/andrewheumann/.nuget/packages/;/usr/local/share/dotnet/sdk/NuGetFallbackFolder</NuGetPackageFolders>
+    <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>
+    <NuGetToolVersion Condition=" '$(NuGetToolVersion)' == '' ">5.7.0</NuGetToolVersion>
+  </PropertyGroup>
+  <ItemGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <SourceRoot Include="$([MSBuild]::EnsureTrailingSlash($(NuGetPackageFolders)))" />
+  </ItemGroup>
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+  </PropertyGroup>
+  <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Import Project="$(NuGetPackageRoot)microsoft.testplatform.testhost/16.5.0/build/netcoreapp2.1/Microsoft.TestPlatform.TestHost.props" Condition="Exists('$(NuGetPackageRoot)microsoft.testplatform.testhost/16.5.0/build/netcoreapp2.1/Microsoft.TestPlatform.TestHost.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.codecoverage/16.5.0/build/netstandard1.0/Microsoft.CodeCoverage.props" Condition="Exists('$(NuGetPackageRoot)microsoft.codecoverage/16.5.0/build/netstandard1.0/Microsoft.CodeCoverage.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.net.test.sdk/16.5.0/build/netcoreapp2.1/Microsoft.NET.Test.Sdk.props" Condition="Exists('$(NuGetPackageRoot)microsoft.net.test.sdk/16.5.0/build/netcoreapp2.1/Microsoft.NET.Test.Sdk.props')" />
+    <Import Project="$(NuGetPackageRoot)xunit.runner.visualstudio/2.4.0/build/netcoreapp1.0/xunit.runner.visualstudio.props" Condition="Exists('$(NuGetPackageRoot)xunit.runner.visualstudio/2.4.0/build/netcoreapp1.0/xunit.runner.visualstudio.props')" />
+    <Import Project="$(NuGetPackageRoot)xunit.core/2.4.0/build/xunit.core.props" Condition="Exists('$(NuGetPackageRoot)xunit.core/2.4.0/build/xunit.core.props')" />
+  </ImportGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <Pkgxunit_analyzers Condition=" '$(Pkgxunit_analyzers)' == '' ">/Users/andrewheumann/.nuget/packages/xunit.analyzers/0.10.0</Pkgxunit_analyzers>
+    <PkgMicrosoft_CodeAnalysis_Analyzers Condition=" '$(PkgMicrosoft_CodeAnalysis_Analyzers)' == '' ">/Users/andrewheumann/.nuget/packages/microsoft.codeanalysis.analyzers/2.9.4</PkgMicrosoft_CodeAnalysis_Analyzers>
+    <PkgAWSSDK_Core Condition=" '$(PkgAWSSDK_Core)' == '' ">/Users/andrewheumann/.nuget/packages/awssdk.core/3.3.106.13</PkgAWSSDK_Core>
+    <PkgAWSSDK_SecurityToken Condition=" '$(PkgAWSSDK_SecurityToken)' == '' ">/Users/andrewheumann/.nuget/packages/awssdk.securitytoken/3.3.2.3</PkgAWSSDK_SecurityToken>
+    <PkgAWSSDK_S3 Condition=" '$(PkgAWSSDK_S3)' == '' ">/Users/andrewheumann/.nuget/packages/awssdk.s3/3.3.110.59</PkgAWSSDK_S3>
+    <PkgAWSSDK_Lambda Condition=" '$(PkgAWSSDK_Lambda)' == '' ">/Users/andrewheumann/.nuget/packages/awssdk.lambda/3.3.109.15</PkgAWSSDK_Lambda>
+    <PkgAWSSDK_CognitoIdentityProvider Condition=" '$(PkgAWSSDK_CognitoIdentityProvider)' == '' ">/Users/andrewheumann/.nuget/packages/awssdk.cognitoidentityprovider/3.3.102.6</PkgAWSSDK_CognitoIdentityProvider>
+    <PkgAWSSDK_CognitoIdentity Condition=" '$(PkgAWSSDK_CognitoIdentity)' == '' ">/Users/andrewheumann/.nuget/packages/awssdk.cognitoidentity/3.3.2.14</PkgAWSSDK_CognitoIdentity>
+    <PkgAWSSDK_AppSync Condition=" '$(PkgAWSSDK_AppSync)' == '' ">/Users/andrewheumann/.nuget/packages/awssdk.appsync/3.3.104.37</PkgAWSSDK_AppSync>
+  </PropertyGroup>
+</Project>

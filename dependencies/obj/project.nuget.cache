@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "tF+xRPcwCjSYMgv9eqXk0nTQG1AuayQR62k81QrBaEx4BKFfT9A7nvCf+JXHGb1gUMlZCG+o5kkni4G/O/Ee6g==",
+  "success": true,
+  "projectFilePath": "/Users/andrewheumann/Dev/EnvelopeByCenterlines/dependencies/EnvelopeByCenterlines.Dependencies.csproj",
+  "expectedPackageFiles": [
+    "/Users/andrewheumann/.nuget/packages/gltf2loader/1.1.3-alpha/gltf2loader.1.1.3-alpha.nupkg.sha512",
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder/newtonsoft.json/11.0.2/newtonsoft.json.11.0.2.nupkg.sha512",
+    "/Users/andrewheumann/.nuget/packages/sixlabors.imagesharp/1.0.0/sixlabors.imagesharp.1.0.0.nupkg.sha512",
+    "/Users/andrewheumann/.nuget/packages/system.componentmodel.annotations/4.6.0/system.componentmodel.annotations.4.6.0.nupkg.sha512",
+    "/Users/andrewheumann/.nuget/packages/unofficial.libtessdotnet/2.0.0/unofficial.libtessdotnet.2.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

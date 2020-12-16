@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Hypar.Elements.Serialization.IFC</name>
+    </assembly>
+    <members>
+        <member name="T:Elements.Serialization.IFC.ElementsExtensions">
+            <summary>
+            Extension methods for converting elements to IFC entities.
+            </summary>
+        </member>
+        <member name="T:Elements.Serialization.IFC.IFCExtensions">
+            <summary>
+            Extension methods for converting IFC entities to elements.
+            </summary>
+        </member>
+        <member name="T:Elements.Serialization.IFC.IFCModelExtensions">
+            <summary>
+            Extension methods for writing elements to and from IFC.
+            </summary>
+        </member>
+        <member name="M:Elements.Serialization.IFC.IFCModelExtensions.FromIFC(System.String,System.Collections.Generic.List{System.String}@,System.Collections.Generic.IList{System.String})">
+            <summary>
+            Load a model from IFC.
+            </summary>
+            <param name="path">The path to an IFC STEP file.</param>
+            <param name="idsToConvert">An array of element ids to convert.</param>
+            <param name="constructionErrors">Error messages which ocurred during model construction.</param>
+            <returns>A model.</returns>
+        </member>
+        <member name="M:Elements.Serialization.IFC.IFCModelExtensions.ToIFC(Elements.Model,System.String)">
+            <summary>
+            Write the model to IFC.
+            </summary>
+            <param name="model"></param>
+            <param name="path">The path to the generated IFC STEP file.</param>
+        </member>
+    </members>
+</doc>

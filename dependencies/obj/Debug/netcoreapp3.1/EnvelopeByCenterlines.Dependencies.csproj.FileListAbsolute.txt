@@ -1,0 +1,15 @@
+/Users/andrewheumann/Dev/EnvelopeByCenterlines/dependencies/bin/Debug/netcoreapp3.1/Textures/UV.jpg
+/Users/andrewheumann/Dev/EnvelopeByCenterlines/dependencies/bin/Debug/netcoreapp3.1/EnvelopeByCenterlines.Dependencies.deps.json
+/Users/andrewheumann/Dev/EnvelopeByCenterlines/dependencies/bin/Debug/netcoreapp3.1/EnvelopeByCenterlines.Dependencies.dll
+/Users/andrewheumann/Dev/EnvelopeByCenterlines/dependencies/bin/Debug/netcoreapp3.1/EnvelopeByCenterlines.Dependencies.pdb
+/Users/andrewheumann/Dev/EnvelopeByCenterlines/dependencies/obj/Debug/netcoreapp3.1/EnvelopeByCenterlines.Dependencies.csprojAssemblyReference.cache
+/Users/andrewheumann/Dev/EnvelopeByCenterlines/dependencies/obj/Debug/netcoreapp3.1/EnvelopeByCenterlines.Dependencies.AssemblyInfoInputs.cache
+/Users/andrewheumann/Dev/EnvelopeByCenterlines/dependencies/obj/Debug/netcoreapp3.1/EnvelopeByCenterlines.Dependencies.AssemblyInfo.cs
+/Users/andrewheumann/Dev/EnvelopeByCenterlines/dependencies/obj/Debug/netcoreapp3.1/EnvelopeByCenterlines.Dependencies.csproj.CoreCompileInputs.cache
+/Users/andrewheumann/Dev/EnvelopeByCenterlines/dependencies/obj/Debug/netcoreapp3.1/EnvelopeByCenterlines.Dependencies.dll
+/Users/andrewheumann/Dev/EnvelopeByCenterlines/dependencies/obj/Debug/netcoreapp3.1/EnvelopeByCenterlines.Dependencies.pdb
+/Users/andrewheumann/Dev/EnvelopeByCenterlines/dependencies/bin/Debug/netcoreapp3.1/Hypar.Elements.dll
+/Users/andrewheumann/Dev/EnvelopeByCenterlines/dependencies/bin/Debug/netcoreapp3.1/Csg.dll
+/Users/andrewheumann/Dev/EnvelopeByCenterlines/dependencies/bin/Debug/netcoreapp3.1/Hypar.Elements.pdb
+/Users/andrewheumann/Dev/EnvelopeByCenterlines/dependencies/bin/Debug/netcoreapp3.1/Hypar.Elements.xml
+/Users/andrewheumann/Dev/EnvelopeByCenterlines/dependencies/obj/Debug/netcoreapp3.1/EnvelopeByCenterlines.Dependencies.csproj.CopyComplete

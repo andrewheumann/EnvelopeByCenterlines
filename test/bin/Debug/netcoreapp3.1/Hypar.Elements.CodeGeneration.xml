@@ -1,0 +1,228 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Hypar.Elements.CodeGeneration</name>
+    </assembly>
+    <members>
+        <member name="T:Elements.Generate.CatalogGenerator">
+            <summary>
+            Generate code for a ContentCatalog.  The basic format will be a static class with properties
+            for each of the types in the catalog.
+            </summary>
+        </member>
+        <member name="P:Elements.Generate.CatalogGenerator.CatalogTemplatePath">
+            <summary>
+            The directory in which to find code templates. Some execution contexts may require this to be overridden as the
+            Executing Assembly is not necessarily in the same place as the templates (e.g. Headless Grasshopper Execution)
+            </summary>
+        </member>
+        <member name="M:Elements.Generate.CatalogGenerator.FromUri(System.String,System.String)">
+            <summary>
+            Generate a catalog from either file path or public URL.
+            </summary>
+            <param name="uri">The location of the catalog json file.</param>
+            <param name="saveDirectory">The folder of where to save the resulting generated code.</param>
+        </member>
+        <member name="T:Elements.Generate.CompilationResult">
+            <summary>
+            The result of a compilation.
+            </summary>
+        </member>
+        <member name="P:Elements.Generate.CompilationResult.Success">
+            <summary>
+            True if the compilation succeeded.
+            </summary>
+        </member>
+        <member name="P:Elements.Generate.CompilationResult.Assembly">
+            <summary>
+            The Assembly loaded from the compilation, if successful.
+            </summary>
+        </member>
+        <member name="P:Elements.Generate.CompilationResult.DiagnosticResults">
+            <summary>
+            Any messages or errors that arose during compilation.
+            </summary>
+        </member>
+        <member name="T:Elements.Generate.GenerationResult">
+            <summary>
+            The result of code generation.
+            </summary>
+        </member>
+        <member name="P:Elements.Generate.GenerationResult.Success">
+            <summary>
+            True if the code was generated successfully.
+            </summary>
+        </member>
+        <member name="P:Elements.Generate.GenerationResult.FilePath">
+            <summary>
+            The file path to the generated code.
+            </summary>
+        </member>
+        <member name="P:Elements.Generate.GenerationResult.DiagnosticResults">
+            <summary>
+            Any messages or errors that arose during code generation.
+            </summary>
+        </member>
+        <member name="T:Elements.Generate.HyparFilters">
+            <summary>
+            This class contains text filtering methods.  They are used during rendering in liquid templates.
+            We shouldn't actually need to implement these ourselves. See the TODO in the source code for more information.  
+            </summary>
+        </member>
+        <member name="M:Elements.Generate.HyparFilters.Lowercamelcase(DotLiquid.Context,System.String,System.Boolean)">
+            <summary>
+            Return the string in lower camel case.
+            </summary>
+            <param name="context">The DotLiquid.Context this filter is running in.</param>
+            <param name="input">The string to be formatted.</param>
+            <param name="firstCharacterMustBeAlpha">Should the @ character be prepended to the string.</param>
+        </member>
+        <member name="M:Elements.Generate.HyparFilters.Safeidentifierlower(DotLiquid.Context,System.String,System.Boolean)">
+            <summary>
+            Return the string turned into a save C# identifier lowercased.
+            </summary>
+            <param name="context">The DotLiquid.Context this filter is running in.</param>
+            <param name="input">The string to be formatted.</param>
+            <param name="firstCharacterMustBeAlpha">Should the @ character be prepended to the string.</param>
+        </member>
+        <member name="M:Elements.Generate.HyparFilters.Safeidentifierupper(DotLiquid.Context,System.String,System.Boolean)">
+            <summary>
+            Return the string turned into a save C# identifier uppercased.
+            </summary>
+            <param name="context">The DotLiquid.Context this filter is running in.</param>
+            <param name="input">The string to be formatted.</param>
+            <param name="firstCharacterMustBeAlpha">Should the @ character be prepended to the string.</param>
+        </member>
+        <member name="M:Elements.Generate.HyparFilters.Csharpdocs(System.String,System.Int32)">
+            <summary>
+            Convert the string into a tabbed text block with line breaks.
+            </summary>
+            <param name="input">The string to be formatted.</param>
+            <param name="tabCount">The number of tabs that should be used.</param>
+        </member>
+        <member name="M:Elements.Generate.HyparFilters.Empty(DotLiquid.Context,System.Object)">
+            <summary>
+            Return an empty list of the input object's type.
+            </summary>
+            <param name="context">The DotLiquid.Context this filter is running in.</param>
+            <param name="input">The string to be formatted.</param>
+        </member>
+        <member name="M:Elements.Generate.HyparFilters.Tab(DotLiquid.Context,System.String,System.Int32)">
+            <summary>
+            Add the desired number of tabs to the input string.
+            </summary>
+            <param name="context">The DotLiquid.Context this filter is running in.</param>
+            <param name="input">The string to be formatted.</param>
+            <param name="tabCount">The number of tabs that should be used.</param>
+        </member>
+        <member name="T:Elements.Generate.StringUtils.StringUtilities">
+            <summary>
+            Utility methods for working with strings.
+            </summary>
+        </member>
+        <member name="M:Elements.Generate.StringUtils.StringUtilities.ToSafeIdentifier(System.String,System.Boolean)">
+            <summary>
+            Return the string turned into a string safe to use as a C# identifier.
+            </summary>
+            <param name="name"></param>
+            <param name="firstCharLowercase"></param>
+        </member>
+        <member name="T:Elements.Generate.TypeGenerator">
+            <summary>
+            TypeGenerator contains logic for generating element types from JSON schemas.
+            </summary>
+        </member>
+        <member name="F:Elements.Generate.TypeGenerator._hyparSchemas">
+            <summary>
+            These are all the 'base' schemas defined for Elements.
+            </summary>
+        </member>
+        <member name="P:Elements.Generate.TypeGenerator.TemplatesPath">
+            <summary>
+            The directory in which to find code templates. Some execution contexts require this to be overridden as the
+            Executing Assembly is not necessarily in the same place as the templates (e.g. Headless Grasshopper Execution)
+            </summary>
+        </member>
+        <member name="M:Elements.Generate.TypeGenerator.GenerateUserElementTypeFromJsonAsync(System.String,System.String,System.Boolean)">
+            <summary>
+            Generate a user defined type in a .g.cs file from JSON.
+            </summary>
+            <param name="schemaJson">The JSON of the schema.</param>
+            <param name="outputBaseDir">The base output directory.</param>
+            <param name="isUserElement">Is the type a user-defined element?</param>
+            <returns></returns>
+        </member>
+        <member name="M:Elements.Generate.TypeGenerator.GenerateUserElementTypeFromUriAsync(System.String,System.String,System.Boolean)">
+            <summary>
+            Generate a user-defined type in a .g.cs file from a schema.
+            </summary>
+            <param name="uri">The uri to the schema which defines the type. This can be a url or a relative file path.</param>
+            <param name="outputBaseDir">The base output directory.</param>
+            <param name="isUserElement">Is the type a user-defined element?</param>
+            <returns>
+            A GenerationResult object containing info about the success or failure of generation,
+            the file path of the generated code, and any errors that may have occurred during generation.
+            </returns>
+        </member>
+        <member name="M:Elements.Generate.TypeGenerator.GenerateUserElementTypesFromUrisAsync(System.String[],System.String,System.Boolean)">
+            <summary>
+            Generate user-defined types in .g.cs files from a schema.
+            </summary>
+            <param name="uris">An array of uris.</param>
+            <param name="outputBaseDir">The base output directory.</param>
+            <param name="isUserElement">Is the type a user-defined element?</param>
+        </member>
+        <member name="M:Elements.Generate.TypeGenerator.GenerateInMemoryAssemblyFromUrisAndLoadAsync(System.String[],System.Boolean)">
+            <summary>
+            Generate an in-memory assembly containing all the types generated from the supplied uris.
+            </summary>
+            <param name="uris">A collection of uris to JSON schema. These can be public urls or relative file paths.</param>
+            <param name="frameworkBuild">If true, the assembly will be built against the .NET framework, otherwise it will be built against .NET core.</param>
+            <returns>A CompilationResult containing information about the compilation.</returns>
+        </member>
+        <member name="M:Elements.Generate.TypeGenerator.GenerateInMemoryAssemblyFromUrisAndSaveAsync(System.String[],System.String,System.Boolean)">
+            <summary>
+            Generate an in-memory assembly containing all the types generated from the supplied uris and save it to disk.
+            </summary>
+            <param name="uris">A collection of uris to JSON schema. These can be public urls or relative file paths.</param>
+            <param name="dllPath">The path at which the dll will be written. If this is not null, the assembly will be written but not loaded.</param>
+            <param name="frameworkBuild">If true, the assembly will be built against the .NET framework, otherwise it will be built against .NET core.</param>
+            <returns>A CompilationResult containing information about the compilation.</returns>
+        </member>
+        <member name="M:Elements.Generate.TypeGenerator.GenerateElementTypesAsync(System.String)">
+            <summary>
+            Generate the core element types as .cs files to the specified output directory.
+            </summary>
+            <param name="outputBaseDir">The root directory into which generated files will be written.</param>
+        </member>
+        <member name="M:Elements.Generate.TypeGenerator.GetCoreTypeNames">
+            <summary>
+            Get a list of the core Hypar types, which should be excluded from code generation.
+            </summary>
+        </member>
+        <member name="M:Elements.Generate.TypeGenerator.GetSchemaAsync(System.String)">
+            <summary>
+            Asynchronously load a JSON Schema from a URI. If a web address is provided,
+            it will be loaded from the URL, otherwise it will attempt to load from disk.
+            </summary>
+            <param name="uri"></param>
+        </member>
+        <member name="M:Elements.Generate.TypeGenerator.GetLoadedElementTypes(System.Boolean)">
+            <summary>
+            Get the currently loaded UserElement types
+            </summary>
+            <param name="userElementTypesOnly">If true, only return types with the UserElement attribute.</param>
+            <returns>A list of the loaded types with the UserElement attribute.</returns>
+        </member>
+        <member name="M:Elements.Generate.TypeGenerator.GenerateAndSaveDllForSchema(NJsonSchema.JsonSchema,System.String,System.String[]@,System.Boolean)">
+            <summary>
+            For a given schema, generate code, compile an assembly, and write it to disk at the specified path.
+            </summary>
+            <param name="schema"></param>
+            <param name="dllPath"></param>
+            <param name="diagnosticResults"></param>
+            <param name="frameworkBuild"></param>
+            <returns>Returns true if the dll was generated successfully, otherwise false.</returns>
+        </member>
+    </members>
+</doc>

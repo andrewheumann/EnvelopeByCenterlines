@@ -1,0 +1,48 @@
+{
+  "$schema": "https://hypar.io/Schemas/Function.json",
+  "id": "4cc40367-a032-4f9e-89b6-d59159d27523",
+  "name": "Envelope By Centerlines",
+  "description": "The EnvelopeByCenterlines function.",
+  "language": "C#",
+  "model_output": "Envelope",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "Centerlines": {
+        "type": "array",
+        "items": {
+          "type": "object",
+          "$hyparStyle": "row",
+          "properties": {
+            "Centerline": {
+              "$ref": "https://hypar.io/Schemas/Geometry/Polyline.json"
+            },
+            "Width": {
+              "type": "number",
+              "$hyparStyle": "number",
+              "minimum": 5,
+              "maximum": 100,
+              "default": 20,
+              "$hyparUnitType": "length"
+            },
+            "Height": {
+              "type": "number",
+              "$hyparStyle": "number",
+              "minimum": 5,
+              "maximum": 100,
+              "default": 20,
+              "$hyparUnitType": "length"
+            }
+          }
+        }
+      }
+    }
+  },
+  "repository_url": "https://github.com/hypar-io/function",
+  "source_file_key": null,
+  "preview_image": null,
+  "element_types": [
+    "https://raw.githubusercontent.com/hypar-io/Schemas/master/Envelope.json",
+    "https://raw.githubusercontent.com/andrewheumann/EnvelopeByCenterline/master/Sketch.json"
+  ]
+}
